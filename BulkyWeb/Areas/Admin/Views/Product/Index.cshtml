@@ -19,7 +19,7 @@
         </div>
 
 
-        <table class="table table-bordered table-striped">
+        <table id="tblData" class="table table-bordered table-striped">
             <thead>
                 <tr>
                     <th>
@@ -39,7 +39,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody>
+            @* <tbody>
                 @foreach (var item in Model)
                 {
                     <tr>
@@ -56,7 +56,7 @@
                             @item.Author
                         </td>
                         <td>
-                            @* @item.Price *@
+                            @item.Category.Name
                         </td>
                         <td>
                             <div class="w-75 btn-group" role="group">
@@ -70,9 +70,12 @@
                         </td>
                     </tr>
                 }
-            </tbody>
+            </tbody> *@
         </table>
     </div>
 </div>
 <partial name="_Notification" />
 
+@section Scripts {
+    <script src="~/js/product.js"></script>
+}
